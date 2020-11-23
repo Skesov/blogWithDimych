@@ -1,0 +1,13 @@
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 10%;
+
+  object-fit: cover;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 200px auto;
+  margin-top: 20px;
+}

@@ -1,0 +1,10 @@
+.header {
+  grid-column: 1 / 3;
+  background-color: #1f6f8b;
+}
+
+#item {
+  color: #eee;
+  padding: 15px;
+  text-decoration: none;
+}

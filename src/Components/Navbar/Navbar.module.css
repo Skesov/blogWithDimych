@@ -1,0 +1,24 @@
+.navbar {
+  color: white;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  min-height: 750px;
+  border-right: 10px dotted rgba(28,110,164,0.43);
+}
+
+.item {
+  padding: 10px 20px 0;
+}
+
+.item:first-child {
+  padding-top: 20px;
+}
+
+.item a {
+  color: #1c2b2d;
+  text-decoration: none;
+}
+
+.item a.activeLink {
+  color: #1f6f8b;
+}

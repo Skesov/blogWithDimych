@@ -1,0 +1,27 @@
+.app-wrapper {
+  width: 980px;
+  display: grid;
+  grid-gap: 10px;
+  margin: 0 auto;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 70px auto 70px;
+}
+
+
+
+
+
+#postInputArea {
+  width: 100%;
+}
+
+#postButton {
+  float: right;
+  background-color: lightseagreen;
+}
+
+.details {
+  list-style-position: outside;
+}
+
+
