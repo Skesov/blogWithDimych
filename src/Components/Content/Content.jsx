@@ -9,13 +9,26 @@ import Settings from "./Settings/Settings";
 
 function Content(props) {
   return (
-      <div class="content">
-        <Route path='/dialogs' component={Dialogs} />
-        <Route path='/profile' component={StartPage} />
-        <Route path='/news' component={News} />
-        <Route path='/music' component={Music} />
-        <Route path='/settings' component={Settings} />
-      </div>
+    <div className="content">
+      <Route exact path="/">
+        <StartPage posts={props.posts} />
+      </Route>
+      <Route path="/dialogs">
+        <Dialogs friends={props.friends} messages={props.messages} />
+      </Route>
+      <Route path="/profile">
+        <StartPage posts={props.posts} />
+      </Route>
+      <Route path="/news">
+        <News />
+      </Route>
+      <Route path="/music">
+        <Music />
+      </Route>
+      <Route path="/settings">
+        <Settings />
+      </Route>
+    </div>
   );
 }
 

@@ -5,12 +5,12 @@ import Content from "./Components/Content/Content";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter } from "react-router-dom";
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Content />
+        <Content posts={props.posts} friends={props.friends} messages={props.messages}/>
         <Navbar />
         <Footer />
       </div>

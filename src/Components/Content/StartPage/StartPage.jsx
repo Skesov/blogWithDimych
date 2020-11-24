@@ -6,7 +6,7 @@ function StartPage(props) {
   return (
     <div>
       <Profile />
-      <MyPosts />
+      <MyPosts posts={props.posts}/>
     </div>
   );
 }
