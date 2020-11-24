@@ -1,23 +1,9 @@
 import React from "react";
 
-import { NavLink } from "react-router-dom";
 import s from "./Dialogs.module.css";
+import DialogItem from './DialogItem/DialogItem'
+import Message from './Message/Message'
 
-function DialogItem(props) {
-  return (
-    <NavLink
-      activeClassName={s.active}
-      className={s.dialog}
-      to={`/dialogs/${props.userID}`}
-    >
-      {props.name}
-    </NavLink>
-  );
-}
-
-function Message(props) {
-  return <div className={s.message}>{props.text}</div>;
-}
 
 let friends = [
   { name: "Dimych", userID: 1 },
