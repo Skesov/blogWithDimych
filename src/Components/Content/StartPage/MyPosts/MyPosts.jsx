@@ -1,5 +1,15 @@
 import React from "react";
-import Post from './Post/Post'
+import Post from "./Post/Post";
+
+let posts = [
+  { id: 1, text: "Hey, why nobody love me?", likes: 11 },
+  { id: 2, text: "It's our new program! Hey!", likes: 24 },
+  { id: 3, text: "Bla bla bla", likes: 3 },
+];
+
+let postsElements = posts.map(item => {
+  return <Post message={item.text} likesCount={item.likes} />
+})
 
 function MyPosts() {
   return (
@@ -16,8 +26,7 @@ function MyPosts() {
         </button>
       </form>
       <div className="ListOfPosts">
-        <Post message="Hey, why nobody love me?" />
-        <Post message="It's our new program! Hey!" />
+        {postsElements}
       </div>
     </section>
   );

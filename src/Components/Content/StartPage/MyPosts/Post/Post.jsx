@@ -9,7 +9,10 @@ function Post(props) {
         className={s.postAvatar}
         alt='avatar'
       />
+      <div className={s.textBlock}>
       <p id={s.postText}>{props.message}</p>
+      <p id={s.likes}>{`${props.likesCount} likes`}</p>
+      </div>
     </div>
   );
 }

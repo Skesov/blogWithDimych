@@ -15,6 +15,9 @@
 }
 
 #postText {
-  padding-left: 24px;
   display: inline;
+}
+
+#likes {
+  color: darkred;
 }
