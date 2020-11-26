@@ -5,14 +5,21 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
 function Dialogs(props) {
-  let friends = props.friends;
-  let messages = props.messages;
+  let friends = props.state.friends;
+  let messages = props.state.messages;
 
   let friendsElements = friends.map((item, index) => {
     return <DialogItem key={index} userID={item.userID} name={item.name} />;
   });
   let messagesElements = messages.map((item, index) => {
-    return <Message key={index} text={item.text} />;
+    let turnRight = false
+    let avatar = friends[0].avatar
+    if (index%2 === 0) {
+      turnRight = true
+      avatar = friends[1].avatar
+
+    }
+    return <Message key={index} text={item.text} avatar={avatar} turnRight={turnRight} />;
   });
 
   return (

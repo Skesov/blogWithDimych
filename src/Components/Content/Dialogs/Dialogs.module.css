@@ -1,9 +1,15 @@
 .dialogs {
   display: grid;
   grid-template-columns: 2fr 10fr;
+
 }
 
 
 .dialogsItems {
   border-right: 3px solid rgba(28,110,164,0.43);
+}
+
+.messages {
+  width: 80%;
+  margin: 0 auto;
 }

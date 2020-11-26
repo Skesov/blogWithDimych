@@ -1,0 +1,23 @@
+
+#postInputArea {
+    width: 100%;  
+  }
+  
+  #postButton {
+    font-size: 14px;
+    float: right;
+    background-color: #1f6f8b;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition-duration: 0.3s;
+  }
+
+  #postButton:hover {
+    background-color: #1c2b2d;
+  }
+
+  #postButton:active {
+    border: 20px white;
+  }
+  

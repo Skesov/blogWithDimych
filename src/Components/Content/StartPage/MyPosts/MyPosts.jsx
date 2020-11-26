@@ -1,5 +1,6 @@
 import React from "react";
 import Post from "./Post/Post";
+import s from './MyPosts.module.css'
 
 function MyPosts(props) {
   let posts = props.posts;
@@ -9,19 +10,19 @@ function MyPosts(props) {
   });
 
   return (
-    <section className="Posts">
+    <section className={s.posts}>
       <h2>My Posts</h2>
       <form>
         <textarea
-          id="postInputArea"
+          id={s.postInputArea}
           name="newpost"
           placeholder="Your news"
         ></textarea>
-        <button id="postButton" type="submit">
+        <button id={s.postButton} type="submit">
           Send
         </button>
       </form>
-      <div className="ListOfPosts">{postsElements}</div>
+      <div className={s.listOfPosts}>{postsElements}</div>
     </section>
   );
 }
