@@ -8,8 +8,8 @@ function FriendsBlock(props) {
     <div className={styles.friendsBlock}>
       <h2 id={styles.title}>Friends</h2>
       <div className={styles.friendsItems}>
-        {friendList.map((item) => {
-          return <Friend state={item} />;
+        {friendList.map((item, index) => {
+          return <Friend key={index} state={item} />;
         })}
       </div>
     </div>

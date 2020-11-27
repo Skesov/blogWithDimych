@@ -11,13 +11,13 @@ function Content(props) {
   return (
     <div className="content">
       <Route exact path="/">
-        <StartPage state={props.state.profilePage} />
+        <StartPage addPost={props.addPost} state={props.state.profilePage} />
       </Route>
       <Route path="/dialogs">
         <Dialogs state={props.state.dialogsPage} />
       </Route>
       <Route path="/profile">
-        <StartPage state={props.state.profilePage} />
+        <StartPage addPost={props.addPost} state={props.state.profilePage} />
       </Route>
       <Route path="/news">
         <News />

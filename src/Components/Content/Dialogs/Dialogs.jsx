@@ -25,7 +25,10 @@ function Dialogs(props) {
   return (
     <section className={s.dialogs}>
       <div className={s.dialogsItems}>{friendsElements}</div>
-      <div className={s.messages}>{messagesElements}</div>
+      <div className={s.messages}>
+        {messagesElements}
+        
+      </div>
     </section>
   );
 }

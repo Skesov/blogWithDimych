@@ -1,6 +1,6 @@
 import React from "react";
 import Post from "./Post/Post";
-import s from './MyPosts.module.css'
+import s from "./MyPosts.module.css";
 
 function MyPosts(props) {
   let posts = props.posts;
@@ -9,14 +9,24 @@ function MyPosts(props) {
     return <Post key={index} message={post.text} likesCount={post.likes} />;
   });
 
+  let newPostElement = React.createRef();
+
+  let addPost = (event) => {
+    let text = newPostElement.current.value;
+    props.addPost(text);
+    event.preventDefault();
+    newPostElement.current.value = "";
+  };
+
   return (
     <section className={s.posts}>
       <h2>My Posts</h2>
-      <form>
+      <form onSubmit={addPost}>
         <textarea
           id={s.postInputArea}
           name="newpost"
           placeholder="Your news"
+          ref={newPostElement}
         ></textarea>
         <button id={s.postButton} type="submit">
           Send
