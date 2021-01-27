@@ -10,8 +10,8 @@ function App(props) {
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Content state={props.state} addPost={props.addPost}/>
-        <Sidebar state={props.state.dialogsPage.friends}/>
+        <Content state={props.state} dispatch={props.dispatch} />
+        <Sidebar state={props.state.dialogsPage.friends} />
         <Footer />
       </div>
     </BrowserRouter>

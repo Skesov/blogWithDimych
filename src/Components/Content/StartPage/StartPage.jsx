@@ -6,7 +6,7 @@ function StartPage(props) {
   return (
     <div>
       <Profile />
-      <MyPosts addPost={props.addPost} posts={props.state.posts}/>
+      <MyPosts dispatch={props.dispatch} posts={props.state.posts}/>
     </div>
   );
 }

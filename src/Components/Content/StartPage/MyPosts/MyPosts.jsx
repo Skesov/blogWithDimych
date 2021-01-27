@@ -1,8 +1,10 @@
 import React from "react";
 import Post from "./Post/Post";
 import s from "./MyPosts.module.css";
+import {addPostActionCreator, updatePostTextActionCreator} from '../../../../redux/state'
 
-function MyPosts(props) {
+
+const MyPosts = (props) => {
   let posts = props.posts;
 
   let postsElements = posts.map((post, index) => {
@@ -12,10 +14,13 @@ function MyPosts(props) {
   let newPostElement = React.createRef();
 
   let addPost = (event) => {
-    let text = newPostElement.current.value;
-    props.addPost(text);
     event.preventDefault();
-    newPostElement.current.value = "";
+    props.dispatch(addPostActionCreator());
+  };
+
+  let onPostChange = () => {
+    let text = newPostElement.current.value;
+    props.dispatch(updatePostTextActionCreator(text));
   };
 
   return (
@@ -25,8 +30,9 @@ function MyPosts(props) {
         <textarea
           id={s.postInputArea}
           name="newpost"
-          placeholder="Your news"
           ref={newPostElement}
+          onChange={onPostChange}
+          value={props.newPostText}
         ></textarea>
         <button id={s.postButton} type="submit">
           Send
